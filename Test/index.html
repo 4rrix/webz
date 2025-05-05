@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wrap Of Cortex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000033;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 4.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(173, 216, 230, 0.5);
+            animation: float 3s ease-in-out infinite;
+            margin-bottom: 2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .profiles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .profile-card {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            border-radius: 15px;
+            width: 300px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(173, 216, 230, 0.3);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(173, 216, 230, 0.5);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+            border: 3px solid #ADD8E6;
+        }
+
+        .profile-name {
+            color: #ADD8E6;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .profile-details {
+            color: white;
+            list-style: none;
+        }
+
+        .profile-details li {
+            margin-bottom: 0.5rem;
+        }
+
+        .about-section {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 2rem auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .about-section h2 {
+            color: #ADD8E6;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .music-ui {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .music-ui h3 {
+            color: #ADD8E6;
+            margin-bottom: 1rem;
+        }
+
+        audio {
+            width: 100%;
+            filter: invert(0.8);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/cracked-wall.png');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+            
+            .profile-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">The Wrap Of Cortex</h1>
+        
+        <div class="profiles">
+            <div class="profile-card">
+                <img src="profil1.jpg" alt="Profil 1" class="profile-img">
+                <h2 class="profile-name">Agent R</h2>
+                <ul class="profile-details">
+                    <li>🆔 Codename: Arrixx</li>
+                    <li>🎂 Age: 13</li>
+                    <li>🎮 Hobby: Competitive Gaming</li>
+                    <li>🛠️ Specialty: Data Encryption</li>
+                    <li>🌐 Global Website: github.com/4rrix</li>
+                </ul>
+            </div>
+
+            <div class="profile-card">
+                <img src="profil2.jpg" alt="Profil 2" class="profile-img">
+                <h2 class="profile-name">Agent Y</h2>
+                <ul class="profile-details">
+                    <li>🆔 Codename: Phantom Byte</li>
+                    <li>🎂 Age: 13</li>
+                    <li>🎨 Hobby: Digital Art</li>
+                    <li>🛠️ Specialty: Data Encryption</li>
+                    <li>🌐 Global Website: github.com/damskytyz-7</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>About Website</h2>
+            <p>This classified portal contains sensitive information about Cortex Division operatives. Access is restricted to authorized personnel only. All activities are monitored and recorded.</p>
+        </div>
+
+        <div class="music-ui">
+            <h3>Background Music</h3>
+            <audio controls loop>
+                <source src="ambient.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
